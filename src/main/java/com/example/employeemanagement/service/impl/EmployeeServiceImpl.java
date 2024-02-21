@@ -32,12 +32,14 @@ public class EmployeeServiceImpl implements EmployeeService {
         return EmployeeMapper.toEmployeeDto(employee);
     }
 
+    // Implement the methods from the EmployeeService interface
     @Override
     public List<EmployeeDto> getAllEmployees() {
         List<Employee> employees = employeeRepository.findAll();
         return employees.stream().map(EmployeeMapper::toEmployeeDto).collect(Collectors.toList());
     }
 
+    // Implement the methods from the EmployeeService interface
     @Override
     public EmployeeDto updateEmployee(Integer id, EmployeeDto updatedEmployeeDto) {
         Employee employee = employeeRepository.findById(id).
@@ -49,6 +51,7 @@ public class EmployeeServiceImpl implements EmployeeService {
         return EmployeeMapper.toEmployeeDto(updatedEmployee);
     }
 
+    //
     @Override
     public void deleteEmployee(Integer id) {
        employeeRepository.findById(id).
