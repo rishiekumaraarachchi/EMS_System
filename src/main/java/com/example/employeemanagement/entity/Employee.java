@@ -13,6 +13,7 @@ import lombok.Setter;
 @Entity
 @Table(name = "employees")
 
+// This class is used to map the Employee entity to the employees table in the database.
 public class Employee {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
