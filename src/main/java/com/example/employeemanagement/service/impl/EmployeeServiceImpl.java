@@ -17,6 +17,9 @@ public class EmployeeServiceImpl implements EmployeeService {
     public EmployeeServiceImpl(EmployeeRepository employeeRepository) {
         this.employeeRepository = employeeRepository;
     }
+
+    // Implement the methods from the EmployeeService interface
+    @Override
     public EmployeeDto addEmployee(EmployeeDto employeeDto) {
         Employee employee = EmployeeMapper.toEmployee(employeeDto);
         Employee savedEmployee = employeeRepository.save(employee);
