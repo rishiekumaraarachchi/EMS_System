@@ -26,6 +26,8 @@ public class EmployeeServiceImpl implements EmployeeService {
         return EmployeeMapper.toEmployeeDto(savedEmployee);
     }
 
+    // Implement the methods from the EmployeeService interface
+    @Override
     public EmployeeDto getEmployeeById(Integer id){
         Employee employee = employeeRepository.findById(id).
                 orElseThrow(() -> new RuntimeException("Employee not found" + id));
