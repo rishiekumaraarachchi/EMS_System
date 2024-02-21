@@ -17,6 +17,7 @@ public class EmployeeController {
         this.employeeService = employeeService;
     }
 
+    // Implement the methods from the EmployeeService interface
     @PostMapping
     public ResponseEntity<EmployeeDto> addEmployee(@RequestBody EmployeeDto employeeDto) {
        EmployeeDto savedEmployee = employeeService.addEmployee(employeeDto);
