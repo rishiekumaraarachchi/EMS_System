@@ -45,6 +45,7 @@ public class EmployeeController {
         return ResponseEntity.ok(updatedEmployee);
     }
 
+    // Implement the methods from the EmployeeService interface
     @DeleteMapping("/{id}")
     public ResponseEntity<?> deleteEmployee(@PathVariable("id") Integer id){
         employeeService.deleteEmployee(id);
