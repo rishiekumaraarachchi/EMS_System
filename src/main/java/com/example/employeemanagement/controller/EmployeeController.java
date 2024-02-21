@@ -38,6 +38,7 @@ public class EmployeeController {
         return ResponseEntity.ok(employeeDto);
     }
 
+    // Implement the methods from the EmployeeService interface
     @PutMapping("/{id}")
     public ResponseEntity<EmployeeDto> updateEmployee(@PathVariable("id") Integer id, @RequestBody EmployeeDto updatedEmployeeDto){
         EmployeeDto updatedEmployee = employeeService.updateEmployee(id, updatedEmployeeDto);
