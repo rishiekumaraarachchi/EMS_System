@@ -31,6 +31,7 @@ public class EmployeeController {
                 return ResponseEntity.ok(getEmployee);
     }
 
+    // Implement the methods from the EmployeeService interface
     @GetMapping
     public ResponseEntity<?> getAllEmployees(){
         List<EmployeeDto> employeeDto = employeeService.getAllEmployees();
