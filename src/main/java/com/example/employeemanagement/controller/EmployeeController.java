@@ -24,6 +24,7 @@ public class EmployeeController {
          return new ResponseEntity<>(savedEmployee, HttpStatus.CREATED);
     }
 
+    // Implement the methods from the EmployeeService interface
     @GetMapping("/{id}")
     public ResponseEntity<EmployeeDto> getEmployee(@PathVariable("id") Integer id){
         EmployeeDto getEmployee = employeeService.getEmployeeById(id);
